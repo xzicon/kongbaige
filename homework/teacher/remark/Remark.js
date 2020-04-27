@@ -59,11 +59,15 @@ export default class Remark extends Component {
                                         data={this.state.data}
                                         numColumns={1}
                                         renderItem={({ item }) => (
+                                            item.isgrade === 1 ?
                                             <View style={{ width: width * 0.96, height:  220 * s, backgroundColor: 'white', marginLeft: 0.02 * width, marginBottom: 0.02 * width, }}>
                                                 <TouchableOpacity onPress={() => Actions.rarticle({ gid: item.gid, })} >
                                                     
-                                                    <View style={{ width: width * 0.94, height: '10%', marginTop: '2%', marginLeft: width * 0.02, marginRight: 0.02 * width,}}><Text style={{ fontSize: 26 * s, fontWeight: 'bold', color: '#333' }} >{item.atitle}</Text></View>
-                                                    <View style={{ width: width * 0.94, height: '45%', marginTop: '3%', marginLeft: width * 0.02, marginRight: 0.02 * width,overflow:"hidden"}}><Text style={{ fontSize: 20 * s, color: '#333' }} >{item.acontent}</Text></View>
+                                                    <View style={{ width: width * 0.94, height: '15%', marginTop: '2%', marginLeft: width * 0.02, marginRight: 0.02 * width,flexDirection:'row',justifyContent:'space-between'}}>
+                                                        <Text style={{widht:'50%',height:'100%', fontSize: 26 * s, fontWeight: 'bold', color: '#333',}} >{item.atitle}</Text>
+                                                        <Text style={{widht:'20%',height:'100%', fontSize: 26 * s, fontWeight: 'bold', color:'red',marginRight:'5%',fontFamily:'华文彩云',fontStyle:'italic',textDecorationLine:'underline',borderBottomWidth:1,borderBottomColor:'red'}}>&nbsp;{item.score}</Text>
+                                                    </View>
+                                                    <View style={{ width: width * 0.94, height: '45%', marginTop: '1%', marginLeft: width * 0.02, marginRight: 0.02 * width,overflow:"hidden",}}><Text style={{ fontSize: 20 * s, color: '#333' }} >{item.acontent}</Text></View>
                                                     <View style={{ width: width * 0.94, height: '10%', marginTop: '2%', marginLeft: 0.02 * width,}}>
                                                         <Text style={{ fontSize: 18 * s, color: 'gray' }} >{item.uname}</Text>
                                                         
@@ -74,6 +78,7 @@ export default class Remark extends Component {
                                                     
                                                 </TouchableOpacity>
                                             </View>
+                                            :<View></View>
                                         )}
                                     />
                                 </View>

@@ -105,14 +105,20 @@ export default class Rarticle extends Component {
                         </View>
 
                         <View style={{width:'100%',borderBottomColor:'gray',borderBottomWidth:2*s}}>
-                            <Text style={{width:"100%",fontSize:28*s,color:'#333',padding:10}}>作文评分</Text>
-                            <View style={{ width:'100%', flexDirection: 'row', justifyContent: 'center',margin:5}}>
+                            <View style={{width:'100%',flexDirection:'row',paddingTop:3,paddingLeft:10}}><Text style={{fontSize: 28 * s,color:'#333'}}>作文等级: </Text><Text style={{fontSize: 25 * s,color:'red'}}>&nbsp;&nbsp;{this.state.data.rank}</Text></View>
+                            <View style={{width:'100%',flexDirection:'row',padding:3,paddingLeft:10 }}><Text style={{fontSize: 28 * s,color:'#333'}}>分数: </Text><Text style={{fontSize: 25 * s,color:'red'}}>&nbsp;&nbsp;{this.state.data.score}</Text></View>
+                            <Text style={{width:"100%",fontSize:28*s,color:'#333',paddingLeft:10}}>作文评分 :</Text>
+                            <View style={{ width:'100%', flexDirection: 'column', justifyContent: 'center',padding:10,}}>
+                                
                                 <View style={{width:'94%', justifyContent: 'center',}}>
-                                    <View style={{width:'100%',flexDirection:'row',padding:3 }}><Text style={{fontSize: 25 * s,color:'#333'}}>作文等级: </Text><Text style={{fontSize: 25 * s,color:'red'}}>&nbsp;&nbsp;一类文</Text></View>
-                                    <View style={{width:'100%',flexDirection:'row',padding:3 }}><Text style={{fontSize: 25 * s,color:'#333'}}>分数: </Text><Text style={{fontSize: 25 * s,color:'red'}}>&nbsp;&nbsp;{this.state.data.score}</Text></View>
-                                    <Text style={{width:'100%', fontSize: 25 * s,color:'#333',padding:3 }}>内容: &nbsp;&nbsp;{this.state.data.gcontent}</Text>
+                                    
+                                    <Text style={{width:'100%', fontSize: 25 * s,color:'#333',padding:3}}>内容: &nbsp;&nbsp;{this.state.data.gcontent}</Text>
                                     <Text style={{width:'100%', fontSize: 25 * s,color:'#333',padding:3  }}>语言: &nbsp;&nbsp;{this.state.data.glanguage}</Text>
+                                    <Text style={{width:'100%', fontSize: 25 * s,color:'#333',padding:3 }}>结构: &nbsp;&nbsp;{this.state.data.gstructure}</Text>
                                     <Text style={{width:'100%', fontSize: 25 * s,color:'#333',padding:3 }}>卷面: &nbsp;&nbsp;{this.state.data.gcover}</Text>
+                                    <Text style={{width:'100%', fontSize: 25 * s,color:'#333',padding:3 }}>表达: &nbsp;&nbsp;{this.state.data.gexpress}</Text>
+                                    <Text style={{width:'100%', fontSize: 25 * s,color:'#333',padding:3 }}>特征: &nbsp;&nbsp;{this.state.data.gfeature}</Text>
+                                    
                                 </View>
                             </View>
                         </View>

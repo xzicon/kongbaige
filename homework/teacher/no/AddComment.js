@@ -82,7 +82,7 @@ export default class Feedback extends Component {
     render() {
 
         return (
-            <View style={{ flex: 1, backgroundColor:'#f6f6fa'}}>
+            <View style={{ flex: 1, }}>
                 <View style={{ height: 80 * s, marginBottom: 5, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
                     <View style={{
                         width: 60, height: 50 * s,

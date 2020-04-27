@@ -41,7 +41,7 @@ import Material from './composition/composition/Material';
 import Popular from './composition/composition/Popular';
 import Seleced from './composition/composition/Seleced';
 // 微课
-
+// import Lesson from "./composition/Lesson/Lesson";
 // 我的
 import Userinfor from './composition/userinfor/Userinfor';
 import Myset from './composition/userinfor/Myset';
@@ -59,8 +59,11 @@ import Follow from './composition/userinfor/Follow'
 import Huozan from './composition/userinfor/Huozan';
 import Message from './composition/userinfor/Message';
 
+import Tset from './teacher/mine/Tset';
+import TFeedback from './teacher/mine/TFeedback';
 import Mcomment from './teacher/mine/Mcomment';
 import Mine from './teacher/mine/Mine';
+import Editor from './teacher/mine/Editor';
 import Tquestion from './teacher/mine/Tquestion';
 import Tmessage from './teacher/mine/Tmessage';
 import Connection from './teacher/mine/Connection';
@@ -73,6 +76,8 @@ import AddComment from './teacher/no/AddComment'
 //已点评
 import Remark from './teacher/remark/Remark';
 import Rarticle from './teacher/remark/Rarticle';
+
+
 
 
 
@@ -292,16 +297,16 @@ const App = () => {
 									
 									
 									{/* 设置 */}
-									<Scene key='myset' component={Myset} hideTabBar hideNavBar />
+									<Scene key='tset' component={Tset} hideTabBar hideNavBar />
 									<Scene key='tquestion' component={Tquestion} hideTabBar hideNavBar />
-									<Scene key='feedback' component={Feedback} hideTabBar hideNavBar />
+									<Scene key='tfeedback' component={TFeedback} hideTabBar hideNavBar />
 									<Scene key='mcomment' component={Mcomment} hideTabBar hideNavBar />
 									<Scene key='connection' component={Connection} hideTabBar hideNavBar />
 									<Scene key='dianpinganli' component={Dianpinganli} hideTabBar hideNavBar />
 									<Scene key='tidentify' component={Tidentify} hideTabBar hideNavBar />
 									
 									{/* 编辑个人资料 */}
-									<Scene key='ziliao' component={Ziliao} hideTabBar hideNavBar />
+									<Scene key='editor' component={Editor} hideTabBar hideNavBar />
 									
 									{/* 消息 */}
 									
